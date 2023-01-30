@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company>
+    <customer id="100">
+        <age>25</age>
+        <name>Ram</name>
+        <Address>
+            <city>Bangalore</city>
+            <country>India</country>
+            <country>China</country>
+
+        </Address>
+        <Address>
+            <city>Patna</city>
+            <country>India</country>
+        </Address>
+    </customer>
+
+    <customer id="200">
+        <age>26</age>
+        <name>Ashu</name>
+        <Address>
+            <city>Delhi</city>
+            <country>India</country>
+        </Address>
+        <Address>
+            <city>Madhubani</city>
+            <country>India</country>
+        </Address>
+    </customer>
+</company>

@@ -1,0 +1,217 @@
+<backendChannelSettings>
+    <oneAuthHostApi>https://dvs.bvlgari-paris.digivalet.in/oneauth/</oneAuthHostApi>
+    <clientId>dvoa_03e16f51351637f80458ecf1e6bff38f</clientId>
+    <clientSecretKey>4fb7e1cddf494c8089c28f90cce0834dc70d3749e28f61f44a045380c7d58631</clientSecretKey>
+    <oneAuthToken>debaa9223cc870faa77eaf67b4e51254fc79262ad7323078200cbca638f0e59c</oneAuthToken>
+    <oneAuthWaitTimeout>10</oneAuthWaitTimeout>
+    <pmsiApi type="GET" waitTimeout="10">
+        <url>https://his.bvlgari-paris.digivalet.in/dv_app_pmsi/billDetails</url>
+        <headers>
+            <header name="User-Agent">java/dvc-service</header>
+            <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+            <header name="Accept">application/vnd.digivalet.v1+json</header>
+            <header name="access_token">runtime</header>
+        </headers>
+        <queryParams>
+            <queryParam name="access_token">runtime</queryParam>
+        </queryParams>
+    </pmsiApi>
+    <welcomeLetterApi type="GET" waitTimeout="10">
+        <url>https://his.bvlgari-paris.digivalet.in/digivalet-api/api/welcomeLetter/published/get</url>
+        <headers>
+            <header name="User-Agent">java/dvc-service</header>
+            <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+            <header name="Accept">application/json</header>
+            <header name="Access-Token">runtime</header>
+        </headers>
+        <queryParams>
+            <queryParam name="device_type">TV</queryParam>
+            <queryParam name="room_number">runtime</queryParam>
+        </queryParams>
+    </welcomeLetterApi>
+    <getGuestInfoApi type="GET" waitTimeout="10">
+        <url>https://his.bvlgari-paris.digivalet.in/dv_app_pmsi/guestInformation</url>
+        <headers>
+            <header name="User-Agent">java/dvc-service</header>
+            <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+            <header name="Accept">application/vnd.digivalet.v1+json</header>
+            <header name="access_token">runtime</header>
+        </headers>
+        <queryParams>
+            <queryParam name="device_type">dvc</queryParam>
+            <queryParam name="roomNumber">runtime</queryParam>
+            <queryParam name="hotelCode">1</queryParam>
+        </queryParams>
+    </getGuestInfoApi>
+    <pushUpdateAcknowledgementApi type="PATCH" waitTimeout="10">
+        <url>https://his.bvlgari-paris.digivalet.in/node-hcore/push-updates/status</url>
+        <headers>
+            <header name="User-Agent">java/dvc-service</header>
+            <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+            <header name="Accept">application/json</header>
+            <header name="Access-Token">runtime</header>
+        </headers>
+        <queryParams>
+            <queryParam name="roomNumber">runtime</queryParam>
+        </queryParams>
+    </pushUpdateAcknowledgementApi>
+    <butlerDataPostApi type="POST" waitTimeout="10">
+        <url>https:///dv_app_butler/callbutler</url>
+        <headers>
+            <header name="User-Agent">java/dvc-service</header>
+            <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+            <header name="Accept">application/vnd.digivalet.v1+json</header>
+            <header name="access_token">runtime</header>
+        </headers>
+        <queryParams>
+            <queryParam name="roomNumber">runtime</queryParam>
+        </queryParams>
+    </butlerDataPostApi>
+    <tvChannelListApi type="POST" waitTimeout="10">
+        <url>https://his.bvlgari-paris.digivalet.in/digivalet-api/api/tvchannel/tvchannel/generateXml</url>
+        <headers>
+            <header name="User-Agent">java/dvc-service</header>
+            <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+            <header name="Accept">application/vnd.digivalet.v1+json</header>
+            <header name="Access-Token">runtime</header>
+        </headers>
+        <queryParams>
+            <queryParam name="roomNumber">runtime</queryParam>
+        </queryParams>
+    </tvChannelListApi>
+    <postLockDataApi type="POST" waitTimeout="10">
+        <url>https://his.bvlgari-paris.digivalet.in/dv_app_lock/postDataFromController</url>
+        <headers>
+            <header name="User-Agent">java/dvc-service</header>
+            <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+            <header name="Accept">application/vnd.digivalet.v1+json</header>
+            <header name="Access-Token">runtime</header>
+        </headers>
+        <queryParams>
+            <queryParam name="roomNumber">runtime</queryParam>
+            <queryParam name="hotelCode">1</queryParam>
+        </queryParams>
+    </postLockDataApi>
+    <postMovieDataApi type="POST" waitTimeout="10">
+        <url>https://his.bvlgari-paris.digivalet.in/dv_app_pmsi/postMovie</url>
+        <headers>
+            <header name="User-Agent">java/dvc-service</header>
+            <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+            <header name="Accept">application/vnd.digivalet.v1+json</header>
+            <header name="access_token">runtime</header>
+        </headers>
+        <queryParams>
+            <queryParam name="roomNumber">runtime</queryParam>
+            <queryParam name="hotelCode">1</queryParam>
+            <queryParam name="guestId">runtime</queryParam>
+        </queryParams>
+    </postMovieDataApi>
+    <postDataToDigivaletServiceApi>
+        <apiDetail name="updateAcState" type="POST" waitTimeout="10">
+            <!-- Description: To post ac status(DVACProperties) -->
+            <url>https://his.bvlgari-paris.digivalet.in/dv_app_gateway/updateAcState</url>
+            <headers>
+                <header name="User-Agent">java/dvc-service</header>
+                <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+                <header name="Accept">application/vnd.digivalet.v1+json</header>
+                <header name="access_token">runtime</header>
+            </headers>
+            <queryParams>
+                <queryParam name="roomNumber">runtime</queryParam>
+                <queryParam name="hotelCode">1</queryParam>
+            </queryParams>
+        </apiDetail>
+        <apiDetail name="updateRmsState" type="POST" waitTimeout="10">
+            <!-- Description: To post RMS connectivity data(DVConnectionProperties) -->
+            <url>https://his.bvlgari-paris.digivalet.in/dv_app_gateway/updateRmsState</url>
+            <headers>
+                <header name="User-Agent">java/dvc-service</header>
+                <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+                <header name="Accept">application/vnd.digivalet.v1+json</header>
+                <header name="access_token">runtime</header>
+            </headers>
+            <queryParams>
+                <queryParam name="roomNumber">runtime</queryParam>
+                <queryParam name="hotelCode">1</queryParam>
+            </queryParams>
+        </apiDetail>
+        <apiDetail name="updateTvState" type="POST" waitTimeout="10">
+            <!-- Description: To post TV connectivity data(DVConnectionProperties) -->
+            <url>https://his.bvlgari-paris.digivalet.in/dv_app_gateway/updateTvState</url>
+            <headers>
+                <header name="User-Agent">java/dvc-service</header>
+                <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+                <header name="Accept">application/vnd.digivalet.v1+json</header>
+                <header name="access_token">runtime</header>
+            </headers>
+            <queryParams>
+                <queryParam name="roomNumber">runtime</queryParam>
+                <queryParam name="hotelCode">1</queryParam>
+            </queryParams>
+        </apiDetail>
+        <apiDetail name="updateRoomServiceStatus" type="POST" waitTimeout="10">
+            <!-- Description: To post service status(DVRoomServiceProperties) -->
+            <url>https://his.bvlgari-paris.digivalet.in/dv_app_gateway/updateServiceStatus</url>
+            <headers>
+                <header name="User-Agent">java/dvc-service</header>
+                <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+                <header name="Accept">application/vnd.digivalet.v1+json</header>
+                <header name="Access-Token">runtime</header>
+            </headers>
+            <queryParams>
+                <queryParam name="roomNumber">runtime</queryParam>
+                <queryParam name="hotelCode">1</queryParam>
+            </queryParams>
+        </apiDetail>
+        <apiDetail name="updateLightStatus" type="POST" waitTimeout="10">
+            <!-- Description: To post light status(DvLightProperties) -->
+            <url>https://his.bvlgari-paris.digivalet.in/dv_app_gateway/updateLightStatus</url>
+            <headers>
+                <header name="User-Agent">java/dvc-service</header>
+                <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+                <header name="Accept">application/vnd.digivalet.v1+json</header>
+                <header name="Access-Token">runtime</header>
+            </headers>
+            <queryParams>
+                <queryParam name="roomNumber">runtime</queryParam>
+                <queryParam name="hotelCode">1</queryParam>
+            </queryParams>
+        </apiDetail>
+        <apiDetail name="updateTvStatus" type="POST" waitTimeout="10">
+            <!-- Description: To post tv status(DVTVProperties) -->
+            <url>https://his.bvlgari-paris.digivalet.in/dv_app_gateway/updateTvStatus</url>
+            <headers>
+                <header name="User-Agent">java/dvc-service</header>
+                <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+                <header name="Accept">application/vnd.digivalet.v1+json</header>
+                <header name="Access-Token">runtime</header>
+            </headers>
+            <queryParams>
+                <queryParam name="roomNumber">runtime</queryParam>
+                <queryParam name="hotelCode">1</queryParam>
+            </queryParams>
+        </apiDetail>
+        <apiDetail name="updateOccupancyState" type="POST" waitTimeout="10">
+            <url>https://his.bvlgari-paris.digivalet.in/dv_app_gateway/updateOccupancyState</url>
+            <headers>
+                <header name="User-Agent">java/dvc-service</header>
+                <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+                <header name="Accept">application/vnd.digivalet.v1+json</header>
+                <header name="Access-Token">runtime</header>
+            </headers>
+            <queryParams>
+                <queryParam name="roomNumber">runtime</queryParam>
+                <queryParam name="hotelCode">1</queryParam>
+            </queryParams>
+        </apiDetail>
+    </postDataToDigivaletServiceApi>
+    <printerMailerNotificationApi type="POST" waitTimeout="10">
+        <url>https://his.bvlgari-paris.digivalet.in/dv_app_printmail/sendNotificationService</url>
+        <headers>
+            <header name="User-Agent">java/dvc-service</header>
+            <header name="Content-Type">application/vnd.digivalet.v1+json</header>
+            <header name="Accept">application/vnd.digivalet.v1+json</header>
+            <header name="Access-Token">runtime</header>
+        </headers>
+    </printerMailerNotificationApi>
+</backendChannelSettings>
